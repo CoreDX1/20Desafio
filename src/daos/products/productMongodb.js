@@ -5,6 +5,10 @@ const schema =  new Schema({
     type: String,
     require: true
   },
+  imagen: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
