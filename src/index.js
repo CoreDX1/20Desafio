@@ -1,16 +1,15 @@
-import app from './app'
-import {Server} from 'socket.io'
-import http from 'http'
-import {connectDB} from './container/mongodb'
-import sockets from './sockets'
+import { Server } from 'socket.io';
+import http from 'http';
+import app from './app';
+import connectDB from './container/mongodb';
+import sockets from './sockets';
 
-connectDB()
+connectDB();
 
-const server = http.createServer(app)
+const server = http.createServer(app);
 
-const httpServer = server.listen(8080)
-console.log('Server on')
+const httpServer = server.listen(8080);
+console.log('Server on');
 
-const io = new Server(httpServer)
+const io = new Server(httpServer);
 sockets(io);
-

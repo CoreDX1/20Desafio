@@ -2,7 +2,7 @@ import {Router} from 'express'
 
 const router = Router()
 
-router.get('/about', (req, res) => {
+router.get('/about', (_req, res) => {
   res.send('About')
 })
 

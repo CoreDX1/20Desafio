@@ -1,22 +1,22 @@
-import {Schema, model} from 'mongoose'
+import { Schema, model } from 'mongoose';
 
-const schema =  new Schema({
+const schema = new Schema({
   name: {
     type: String,
-    require: true
+    require: true,
   },
   imagen: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   price: {
     type: Number,
-    require: true
-  }
-})
+    require: true,
+  },
+});
 
-export default model('Products', schema)
+export default model('Products', schema);
