@@ -7,9 +7,16 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-      <ul id="products">
-      </ul>
+    <form id="productsFrom">
+      <input type="text" id="name" placeholder="name">
+      <input type="text" id="image" placeholder="image">
+      <input type="text" id="price" placeholder="price">
+      <textarea rows="3" id="description"></textarea>
+      <button>Enviar</button>
+    </form>
+    <ul id="products">
+    </ul>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

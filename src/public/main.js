@@ -1,17 +1,8 @@
-const socket = io();
+import loadProducts from './socket.js';
+import {onHandleSubmit, renderProducts} from './ui.js';
 
-const render = (data) => {
-  const html = data.map((pr) => `
-       <tr>
-        <th class="tr">${pr.name}</th>
-        <td class="tr">$${pr.price}</td>
-        <td class="tr">${pr.description}</td>
-      </tr>
-    `).join(' ');
-  document.querySelector('#products').innerHTML = html;
-};
+loadProducts(renderProducts);
 
-socket.on('dataproducts', (data) => {
-  console.log(data);
-  render(data);
-});
+const productsFrom = document.querySelector('#productsFrom');
+
+productsFrom.addEventListener('submit', onHandleSubmit);
